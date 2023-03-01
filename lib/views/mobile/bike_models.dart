@@ -33,7 +33,7 @@ class _BikeModelPageState extends State<BikeModelPage> {
             child: Column(
               children: [
                 const Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                     'Explore our Bike Models',
                     style: TextStyle(
@@ -54,12 +54,14 @@ class _BikeModelPageState extends State<BikeModelPage> {
                         child: CircularProgressIndicator(),
                       )
                     : ListView.builder(
+                       physics: const ScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: bikeModels.bikes.length,
                         itemBuilder: ((context, index) {
                           final bikeModel =
                               bikeModels.bikes[index].modelImage.split(',');
                           return GridView.builder(
+                             physics: const ScrollPhysics(),
                             gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount: 2),

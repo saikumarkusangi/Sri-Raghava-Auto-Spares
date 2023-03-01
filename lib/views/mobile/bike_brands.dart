@@ -30,7 +30,7 @@ class _BikeBrandsState extends State<BikeBrands> {
             child: Column(
               children: [
                 const Padding(
-                  padding:  EdgeInsets.all(20.0),
+                  padding:  EdgeInsets.all(10.0),
                   child: Text(
                     'Explore our Bike Brands',
                     style: TextStyle(
@@ -51,6 +51,7 @@ class _BikeBrandsState extends State<BikeBrands> {
                         child: CircularProgressIndicator(),
                       )
                     : GridView.builder(
+                      physics: const ScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: controller.bikes.length,
                         gridDelegate:

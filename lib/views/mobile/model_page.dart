@@ -33,7 +33,7 @@ class _ModelsPageState extends State<ModelsPage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Text(
                     '${widget.brand} Models',
                     style: const TextStyle(
@@ -50,6 +50,7 @@ class _ModelsPageState extends State<ModelsPage> {
                   ),
                 ),
                 GridView.builder(
+                   physics: const ScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: widget.modelImages.length,
                     gridDelegate:

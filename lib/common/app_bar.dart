@@ -11,7 +11,7 @@ class CustomAppBar extends StatelessWidget {
     TextEditingController searchController = TextEditingController();
     return SliverAppBar(
       backgroundColor: Themedata.appBarColor,
-      toolbarHeight: 160,
+      toolbarHeight: 150,
       snap: true,
       automaticallyImplyLeading: false,
       floating: true,
@@ -20,7 +20,7 @@ class CustomAppBar extends StatelessWidget {
         children: [
           InkWell(
             onTap: ()=>Navigator.push(context, MobileHome.route()),
-            child: Image.asset(ImageAssets.logo, width: 200)),
+            child: Image.asset(ImageAssets.logo, width: 180)),
           Card(
             child: SizedBox(
               width: MediaQuery.of(context).size.width / 1.1,
@@ -31,7 +31,7 @@ class CustomAppBar extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 1.5,
-                    height: 50,
+                    height: 40,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 10),
                       child: TextField(
@@ -53,7 +53,7 @@ class CustomAppBar extends StatelessWidget {
                               builder: (_) => const SearchPage()));
                     },
                     child: Container(
-                      color: const Color.fromRGBO(3, 37, 191, 1),
+                      color: Color.fromARGB(255, 75, 107, 251),
                       height: 50,
                       width: 60,
                       child: const Center(

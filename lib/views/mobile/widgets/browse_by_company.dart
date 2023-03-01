@@ -18,6 +18,7 @@ class BikesList extends StatelessWidget {
         ? const Loader()
         : Container(
             child: ListView.builder(
+              
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
                 itemCount: controller.bikes.length,
