@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:website/constants/contants.dart';
+import 'package:website/constants/constants.dart';
 import 'package:website/views/mobile/widgets/search_page.dart';
 import '../../common/app_bar.dart';
 import 'widgets/browse_by_company.dart';

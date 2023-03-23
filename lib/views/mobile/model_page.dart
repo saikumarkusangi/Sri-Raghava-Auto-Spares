@@ -22,6 +22,34 @@ class ModelsPage extends StatefulWidget {
 class _ModelsPageState extends State<ModelsPage> {
   @override
   Widget build(BuildContext context) {
+    Grid(){
+      return  GridView.builder(
+                  primary: false,
+                   physics: BouncingScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: widget.modelImages.length,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2),
+                    itemBuilder: ((context, index) {
+                      return Card(
+                        elevation: 10,
+                        child: Padding(
+                          padding: const EdgeInsets.all(0.0),
+                          child: Column(
+                            children: [
+                              Container(
+                                  child: Image.network(
+                                widget.modelImages[index],
+                                fit: BoxFit.contain,
+                              )),
+                              //  Text(widget.models[index])
+                            ],
+                          ),
+                        ),
+                      );
+                    }));
+    }
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
@@ -49,31 +77,7 @@ class _ModelsPageState extends State<ModelsPage> {
                     thickness: 2,
                   ),
                 ),
-                GridView.builder(
-                   physics: const ScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: widget.modelImages.length,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2),
-                    itemBuilder: ((context, index) {
-                      return Card(
-                        elevation: 10,
-                        child: Padding(
-                          padding: const EdgeInsets.all(0.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                  child: Image.network(
-                                widget.modelImages[index],
-                                fit: BoxFit.contain,
-                              )),
-                              //  Text(widget.models[index])
-                            ],
-                          ),
-                        ),
-                      );
-                    }))
+               Grid()
               ],
             ),
           ),

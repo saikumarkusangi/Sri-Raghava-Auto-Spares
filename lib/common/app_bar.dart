@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/views/mobile/mobile_home.dart';
-import '../constants/contants.dart';
+import '../constants/constants.dart';
 import '../views/mobile/widgets/search_page.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -31,11 +31,11 @@ class CustomAppBar extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 1.5,
-                    height: 40,
+                    height: 50,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 10),
                       child: TextField(
-                        style: const TextStyle(fontSize: 22),
+                        style: const TextStyle(fontSize: 24),
                         controller: searchController,
                         
                         decoration: const InputDecoration(

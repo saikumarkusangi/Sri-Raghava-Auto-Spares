@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:provider/provider.dart';
-import 'package:website/constants/contants.dart';
+import 'package:website/constants/constants.dart';
 import 'package:website/views/mobile/bike_models.dart';
 import '../../../controllers/carousel_controller.dart';
 import '../bike_brands.dart';
+import '../spare_categories.dart';
 
 
 
@@ -46,11 +47,12 @@ class _CarouselState extends State<Carousel> {
                                 child: ElevatedButton(
                                     onPressed: () {
                                       if (value.currentIndex == 0) {
-                                       Navigator.push(context, BikeModelPage.route());
+                                      //  Navigator.push(context, BikeModelPage.route());
                                       } else if (value.currentIndex == 1) {
-                                      Navigator.push(context, BikeBrands.route());
+                                       Navigator.push(context, BikeBrands.route());
                                       } else {
-                                        print('bike spares');
+                                      Navigator.push(context,
+                                       MaterialPageRoute(builder: (_)=>const SpareCollections()));
                                       }
                                     },
                                     style: ElevatedButton.styleFrom(

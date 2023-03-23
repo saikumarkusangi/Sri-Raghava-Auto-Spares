@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:website/common/app_bar.dart';
 
-import '../../../constants/contants.dart';
+import '../../../constants/constants.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({Key? key}) : super(key: key);
